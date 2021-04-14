@@ -1,85 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Foodie</title>
+  <title>MoM on Wheels</title>
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-<?php
-include "nav.php";
-?>
+  <?php
+  include "nav.php";
+  ?>
 
-    
 
-    
 
-        <!--Search Button-->
-    <br>
-    
-    <div class ="col-md-3"></div>
-    <div class="col-md-">
+
+
+  <!--Search Button-->
+  <br>
+
+  <div class="col-md-3"></div>
+  <div class="col-md-">
     <?php
-include "search.php";
-?>
-    </div>
-    <br>
+    include "search.php";
+    ?>
+  </div>
+  <br>
 
-    <div class="container">
-        <div class="row">
-        <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <h1 class="gallery-title">Search Results</h1>
-        </div>
+  <div class="container">
+    <div class="row">
+      <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="gallery-title">Search Results</h1>
+      </div>
 
-        <br/>
+      <br />
 
 
-          <?php
-                if(isset($_POST['search']) != 0 ){
-                  $location = $_POST['area'];
+      <?php
+      if (isset($_POST['search']) != 0) {
+        $location = $_POST['area'];
 
-                  if ($location==NULL) {
-                  }
-                  else{
-                    $search = mysqli_real_escape_string($conn, trim($location));
-                    $sql = "SELECT * FROM restaurant WHERE location LIKE '%$search%'";
-                    $fetch = mysqli_query($conn,$sql);
-                    $restaurant = mysqli_fetch_assoc($fetch);
-                    if ($restaurant!=0) {
-                      $sql = "SELECT * FROM restaurant WHERE location LIKE '%$search%'";
-                      $result = mysqli_query($conn,$sql);
-                      $response = array();
-                      while($row = mysqli_fetch_array($result))
-                      {
-                        echo '<img src="data:images/jpeg;base64,'.base64_encode($row['image']).'" height="100" width="100" />';
-                        echo "<br><a href=\"restaurant.php?id=$row[0]\">";
-                        
-                        ?>
-                      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-                        <?php
-                      echo "<p>".$row['name']."</p>";
-                      ?>
-                      </div>  </a>
-                      <?php
-                      }
-                    }
-                    else{
-                      echo "Nothing found!";
-                    }
-                  }                  
-                }
-              ?>  
-            
-            
-            <!-- <a href="kfc_menu.html">
+        if ($location == NULL) {
+        } else {
+          $search = mysqli_real_escape_string($conn, trim($location));
+          $sql = "SELECT * FROM restaurant WHERE location LIKE '%$search%'";
+          $fetch = mysqli_query($conn, $sql);
+          $restaurant = mysqli_fetch_assoc($fetch);
+          if ($restaurant != 0) {
+            $sql = "SELECT * FROM restaurant WHERE location LIKE '%$search%'";
+            $result = mysqli_query($conn, $sql);
+            $response = array();
+            while ($row = mysqli_fetch_array($result)) {
+              echo '<img src="data:images/jpeg;base64,' . base64_encode($row['image']) . '" height="100" width="100" />';
+              echo "<br><a href=\"restaurant.php?id=$row[0]\">";
+
+      ?>
+              <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
+                <?php
+                echo "<p>" . $row['name'] . "</p>";
+                ?>
+              </div> </a>
+      <?php
+            }
+          } else {
+            echo "Nothing found!";
+          }
+        }
+      }
+      ?>
+
+
+      <!-- <a href="kfc_menu.html">
             <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
                 <img src="images/kfc.png" height="200" width="200">
             </div>  </a>
@@ -99,28 +94,28 @@ include "search.php";
             </div>
           </a> -->
 
-            
-        </div>
+
     </div>
+  </div>
 
 
 
 
 
-    <!-- Pagination-->
-    
-    <!-- <div class="container col-md-5" style="margin-left: 900px">
+  <!-- Pagination-->
+
+  <!-- <div class="container col-md-5" style="margin-left: 900px">
       <ul class="pagination">
       <li><a href="#">1</a></li>
       <li><a href="#">2</a></li>
       </ul>
     </div> -->
 
-  </body>
+</body>
 
 </html>
 
-<!-- assets -->    
+<!-- assets -->
 
 <!-- <script src="assets/js/bootstrap.bundle.js"></script> -->
 <script src="assets/js/bootstrap.bundle.min.js"></script>
@@ -158,4 +153,4 @@ include "search.php";
 <!-- <link href="assets/css/result.css" rel="stylesheet"> -->
 <!-- <link href="assets/css/review.css" rel="stylesheet"> -->
 <!-- <link href="assets/css/sign_in.css" rel="stylesheet"> -->
-    <!-- <link href="assets/css/sign_up.css" rel="stylesheet"> -->
+<!-- <link href="assets/css/sign_up.css" rel="stylesheet"> -->

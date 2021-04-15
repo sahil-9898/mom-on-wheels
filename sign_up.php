@@ -5,7 +5,9 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+  <link href="assets/css/half-slider.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link href="assets/css/index.css" rel="stylesheet">
   <title>MoM on Wheels</title>
 
 </head>
@@ -100,33 +102,13 @@
         <!-- Footer -->
         <footer class="py-5 bg-dark">
           <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Foodie 2017</p>
+            <p class="m-0 text-center text-white">Copyright &copy; MoM on Wheels:2021</p>
           </div>
           <!-- /.container -->
         </footer>
-
+        <script src="assets/js/sign_up.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bund le.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 
 </html>
-
-
-<!-- assets -->
-
-<!-- <script src="assets/js/bootstrap.bundle.js"></script> -->
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<!-- <script src="assets/js/bootstrap.js"></script> -->
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/source.bootstrap.min.js"></script>
-<!-- <script src="assets/js/contact_us.js"></script> -->
-<!-- <script src="assets/js/dropdown.js"></script> -->
-<!-- <script src="assets/js/jquery.js"></script> -->
-<script src="assets/js/jquery.min.js"></script>
-
-<script src="assets/js/sign_up.js"></script>
-
-
-<link href="assets/css/bootstrap.min.css" rel="stylesheet">
-<link href="assets/css/source.bootstrap.min.css" rel="stylesheet">
-
-<link href="assets/css/half-slider.css" rel="stylesheet">
-<link href="assets/css/index.css" rel="stylesheet">
